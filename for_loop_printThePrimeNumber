@@ -1,0 +1,12 @@
+for(int a=2;a<=100;a++){
+		bool answer=true;
+		for(int b=2;b<=sqrt(a);b+=(b==2?1:2)){
+			if(a%b==0){
+				answer=false;
+				break;
+			}
+		}
+		if(answer){
+			cout<<a<<"\t";
+		}
+	}
