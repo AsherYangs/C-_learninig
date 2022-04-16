@@ -58,3 +58,22 @@ void insertionSort(int a[], int len, int indexCutoff){
 		}
 	}
 }
+
+------------------ another way  ------------------
+
+void IS_KLC(int a[], const int n){
+	if(n>1){
+		IS_KLC(a+1,n-1);
+		int num1 = a[0];
+		int i=1;
+		for(; i<n; i++){
+			if(a[i]<num1){
+				a[i-1] = a[i];
+			}
+			else{
+				break;
+			}
+		}
+		a[i-1] = num1;
+	}
+}
